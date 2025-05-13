@@ -1,0 +1,7 @@
+-- Query: Monthly infection trends
+SELECT
+    DATE_TRUNC('month', o.confirmation_date) AS month,
+    COUNT(*) AS monthly_cases
+FROM outbreaks o
+GROUP BY month
+ORDER BY month;

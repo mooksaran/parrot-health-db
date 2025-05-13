@@ -1,0 +1,7 @@
+-- Query: Top 5 bird species with most HPAI cases
+SELECT s.common_name, COUNT(*) AS total_cases
+FROM outbreaks o
+JOIN species s ON o.species_id = s.species_id
+GROUP BY s.common_name
+ORDER BY total_cases DESC
+LIMIT 5;
