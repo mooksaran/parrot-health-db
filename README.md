@@ -35,6 +35,11 @@ This project is a professional portfolio demonstrating database analysis for vet
 - Python (Pandas / Jupyter)
 - Git / GitHub for version control
 
+## 🗺️ Entity-Relationship Diagram
+
+![ER Diagram](docs/er-diagram.png)
+
+
 ---
 
 ## 📌 Author
