@@ -59,6 +59,22 @@ To run locally:
 ```bash
 streamlit run streamlit_app.py
 
+---
+
+## 📊 Dashboard Preview
+
+The following interactive dashboard was built with Streamlit to explore the avian flu outbreak dataset:
+
+![Dashboard](docs/dashboard-preview.png)
+
+> Filter by species and province, and visualize top affected bird types and locations.
+
+To launch locally:
+
+```bash
+streamlit run streamlit_app.py
+
+
 
 
 ---
