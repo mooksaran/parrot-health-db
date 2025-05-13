@@ -39,6 +39,27 @@ This project is a professional portfolio demonstrating database analysis for vet
 
 ![ER Diagram](docs/er-diagram.png)
 
+## 📊 Dashboard Preview
+
+![Dashboard](docs/dashboard-preview.png)
+
+
+---
+
+## 🚀 Interactive Dashboard (Streamlit)
+
+This project includes a live dashboard built with Streamlit and Plotly.
+
+- 📌 Filter by bird species and province
+- 📊 Visualize top 10 infected species
+- 📍 See outbreak distribution across provinces
+
+To run locally:
+
+```bash
+streamlit run streamlit_app.py
+
+
 
 ---
 
