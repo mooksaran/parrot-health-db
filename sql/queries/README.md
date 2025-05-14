@@ -1,30 +1,17 @@
-# 💡 SQL Query Explanations
+📂 sql/queries/ – Advanced SQL Query Documentation
 
-This document explains the key SQL queries used to analyze the HPAI (Highly Pathogenic Avian Influenza) outbreak dataset. Each query focuses on different aspects of outbreak tracking: species affected, geographic hotspots, and time-based trends.
+This folder contains analytical SQL queries used to extract insights from the outbreak database.
 
----
+1. top_species.sql
+   - Purpose: Find top 5 most infected bird species
+   - Logic: COUNT outbreaks grouped by species_id
 
-## 1. Top 5 Bird Species with Most Outbreaks
+2. top_provinces.sql
+   - Purpose: Identify top outbreak regions
+   - Logic: Aggregate cases per region from outbreaks table
 
-```sql
-SELECT s.common_name, COUNT(*) AS total_cases
-FROM outbreaks o
-JOIN species s ON o.species_id = s.species_id
-GROUP BY s.common_name
-ORDER BY total_cases DESC
-LIMIT 5;
+3. trends_by_month.sql
+   - Purpose: Monthly trend of outbreaks across years
+   - Logic: DATE_TRUNC & COUNT by confirmation_date
 
-SELECT r.province, COUNT(*) AS outbreak_count
-FROM outbreaks o
-JOIN regions r ON o.region_id = r.region_idß
-GROUP BY r.province
-ORDER BY outbreak_count DESC
-LIMIT 5;
-
-SELECT
-    DATE_TRUNC('month', o.confirmation_date) AS month,
-    COUNT(*) AS monthly_cases
-FROM outbreaks o
-GROUP BY month
-ORDER BY month;
-
+🧪 Each query assumes schema built from schema.sql and validated with test_queries.sql

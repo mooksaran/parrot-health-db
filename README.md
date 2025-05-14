@@ -1,87 +1,102 @@
-# 🦜 Parrot Health DB – Avian Flu Outbreak Tracker (2022–2023)
+# 🦜 Parrot Health & Human Outbreak Analytics Portfolio
 
-This project is a professional portfolio demonstrating database analysis for veterinary data, focusing on avian influenza (HPAI) outbreaks among wild birds in Italy during 2022–2023.
-
-## 📊 Dataset
-
-**Source:** Italian veterinary authority (open data)  
-**File:** `hpai-wild-birds-2022-2023.csv`  
-**Content includes:**
-- Region, Province
-- Bird species (e.g. Mallard, Greylag goose)
-- Number of infected animals
-- Latitude / Longitude
-- HPAI strain (H5N1)
-- Confirmation dates
-
-## 🧱 Database Schema (Planned)
-
-| Table | Description |
-|-------|-------------|
-| `outbreaks` | Contains details of each reported case |
-| `species` | Bird species taxonomy |
-| `regions` | Geolocation and regional metadata |
-
-## 🧠 Example Questions to Analyze
-
-- Which bird species are most affected by H5N1?
-- What regions report the most cases?
-- Is there a seasonal pattern in outbreak dates?
-- Can geospatial clustering of infections be observed?
-
-## 🧪 Tools
-
-- PostgreSQL / SQLite (Schema + Querying)
-- Python (Pandas / Jupyter)
-- Git / GitHub for version control
-
-## 🗺️ Entity-Relationship Diagram
-
-![ER Diagram](docs/er-diagram.png)
-
-## 📊 Dashboard Preview
-
-![Dashboard](docs/dashboard-preview.png)
-
+An advanced, end-to-end data analytics project that integrates SQL, Python, and Tableau to investigate global avian influenza (HPAI) outbreaks in both wild birds and humans (2003–2023).  
+This multi-tool portfolio highlights skills in database design, data wrangling, exploratory analysis, geospatial visualization, and interactive BI dashboarding.
 
 ---
 
-## 🚀 Interactive Dashboard (Streamlit)
+## 📌 Project Summary
 
-This project includes a live dashboard built with Streamlit and Plotly.
+| Component         | Description                                                                 |
+|------------------|-----------------------------------------------------------------------------|
+| 🗃️ **Data Sources**     | WHO and FAO datasets on HPAI outbreaks in birds and humans               |
+| 🛠 **Tools Used**        | SQL (PostgreSQL-style), Python (Pandas, Seaborn, Plotly), Tableau Public |
+| 🧱 **Database Schema**   | 3-table relational model: `regions`, `species`, `outbreaks`              |
+| 📊 **Dashboard Output**  | Tableau with KPI cards, map, line chart, bar chart                        |
+| 📈 **Notebook Analysis** | Colab EDA with time-series, grouping, custom charts                      |
 
-- 📌 Filter by bird species and province
-- 📊 Visualize top 10 infected species
-- 📍 See outbreak distribution across provinces
+---
 
-To run locally:
+## 📁 Project Structure
 
 ```bash
-streamlit run streamlit_app.py
+parrot-health-db/
+├── data/                         # Raw datasets (CSV)
+│   └── README.md                 # Dataset descriptions and sources
+│
+├── sql/                          # Relational schema + analytics queries
+│   ├── schema.sql
+│   ├── queries/                  # Advanced insights queries
+│   └── README.md                 # Query logic explanations
+│
+├── analysis/notebooks/
+│   └── parrot_health_analysis.ipynb   # Google Colab EDA notebook
+│
+├── tableau/                      # Tableau dashboard assets
+│   ├── dashboard-preview.png
+│   └── README.md                 # Dashboard link + visual structure
+│
+├── docs/
+│   └── er-diagram.png            # Entity Relationship Diagram (ERD)
+│
+├── streamlit_app.py (optional)  # Local dashboard (for extension)
+└── README.md (this file)
+
+## 🧠 Key Features
+
+### ✅ SQL + Data Modeling
+
+- Designed normalized schema for bird outbreaks (wildlife surveillance)
+- Created reusable views and queries for:
+  - Most infected species
+  - Regional outbreaks by province
+  - Monthly trend detection
+- Used ERD to define relationships with foreign key constraints
 
 ---
 
-## 📊 Dashboard Preview
+### ✅ Python (Colab)
 
-The following interactive dashboard was built with Streamlit to explore the avian flu outbreak dataset:
-
-![Dashboard](docs/dashboard-preview.png)
-
-> Filter by species and province, and visualize top affected bird types and locations.
-
-To launch locally:
-
-```bash
-streamlit run streamlit_app.py
-
-
-
+- Data cleansing, group-by aggregation, and datetime handling
+- Trend analysis using seaborn, plotly, and pandas visualizations
+- Country/year analysis + species-level exploration
 
 ---
 
-## 📌 Author
+### ✅ Tableau Dashboard
 
-**Saran (Mook)**  
-GitHub: [@mooksaran](https://github.com/mooksaran)
+- KPI Cards: Total Cases, Total Deaths, CFR%
+- Interactive map view and filters by country
+- Time-series trends and Top 10 Country breakdown
+- 📎 View Live Dashboard:  
+  [https://public.tableau.com/views/your-dashboard-link](https://public.tableau.com/views/your-dashboard-link)
 
 ---
+
+## 🔗 Demo Links
+
+- 📊 **Tableau Dashboard**  
+  [View on Tableau Public](https://public.tableau.com/views/your-dashboard-link)
+
+- 📓 **Colab Notebook**  
+  [`analysis/notebooks/parrot_health_analysis.ipynb`](analysis/notebooks/parrot_health_analysis.ipynb)
+
+- 🧮 **SQL Queries Overview**  
+  [`sql/queries/README.md`](sql/queries/README.md)
+
+---
+
+## 💼 About the Author
+
+**Mook S.**  
+Aspiring Data Analyst with hands-on experience in SQL, Python, BI tools, and real-world health datasets.  
+Portfolio developed as part of a full-stack analytics track for healthcare + public data analytics.
+
+📧 [GitHub Profile](https://github.com/mooksaran)  
+🔗 [Tableau](#)(https://public.tableau.com/app/profile/saranya.sangsuk.iem/vizzes)
+
+---
+
+## 🏷 Tags
+
+`#data-analytics` `#portfolio-project` `#tableau` `#sql` `#public-health` `#avian-flu` `#EDA`
